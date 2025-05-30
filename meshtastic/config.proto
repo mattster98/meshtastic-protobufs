@@ -527,6 +527,12 @@ message Config {
     bool ipv6_enabled = 11;
 
     /*
+     * Timeout (in milliseconds) for WiFi connection attempts before falling back to Bluetooth.
+     * If zero or unset, a default value (e.g., 60000 ms) will be used by firmware.
+     */
+    uint32 wifi_connect_timeout_ms = 12;
+
+    /*
      * Available flags auxiliary network protocols
      */
     enum ProtocolFlags {
